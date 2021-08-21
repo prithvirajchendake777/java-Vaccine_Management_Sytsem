@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="blank" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0afa11d2-8209-404e-a2e3-3585869e7fc0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="pouy"/>
+	<parameter name="id" class="java.lang.String" nestedType="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM "BOOKING"
+WHERE 
+	 "BOOKING"."USER_ID" =  $P{id}]]>
+	</queryString>
+	<field name="BOOKING_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BOOKING_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="BOOKING_ID"/>
+	</field>
+	<field name="USER_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="USER_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="USER_ID"/>
+	</field>
+	<field name="VACCINE_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="VACCINE_NAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="VACCINE_NAME"/>
+	</field>
+	<field name="V_DATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="V_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="V_DATE"/>
+	</field>
+	<field name="SLOT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SLOT"/>
+		<property name="com.jaspersoft.studio.field.label" value="SLOT"/>
+	</field>
+	<field name="DOSE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DOSE"/>
+		<property name="com.jaspersoft.studio.field.label" value="DOSE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="22" width="370" height="38" uuid="7361b5b3-ed31-4797-bca4-91c31a61a55b"/>
+				<textElement>
+					<font fontName="Arial" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cowin Vaccination System]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="20" width="504" height="30" uuid="17127b92-f1ea-4849-9776-258f3ea606eb"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Provisional Certificate For COVID-19 Vaccination]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="415" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="16" width="193" height="30" uuid="dd69be50-cddc-43a4-b565-a3447973380b"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Benificiary Details :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="60" width="192" height="30" uuid="d710398b-3a17-4e78-9ac3-8cc3a5f381b4"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Benificiary ID :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="60" width="226" height="30" uuid="f0088b16-c6e0-40a9-a6ab-2ca7cb280b2b"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BOOKING_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="110" width="188" height="30" uuid="7c1d6099-0f8c-4eb5-bfc3-6641fcb7a094"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[User ID :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="110" width="226" height="30" uuid="7e82e6b8-9dbc-4433-81d6-5b18ae7c39e8"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{USER_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="27" y="180" width="176" height="30" uuid="fa33cc3e-8d7e-4729-841f-5bfab305146c"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Vaccine Details :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="227" width="193" height="30" uuid="fd7fcc7d-d9c1-4e07-a477-90b031605151"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Vaccine Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="227" width="224" height="30" uuid="43f3faba-362d-41bd-acf6-803367a6b459"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VACCINE_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="32" y="270" width="187" height="30" uuid="54a8ffc3-7b6e-42e2-9eb3-f016c0356ee3"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Dose :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="267" width="224" height="30" uuid="3cc1eef2-efc8-451d-9ccd-75201796f4c2"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOSE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="32" y="315" width="188" height="30" uuid="98557cf1-8c54-4104-aef7-24dbf5cfbca5"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="315" width="224" height="30" uuid="2b6e14ee-70fd-4a2e-a7da-876a592e49bd"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{V_DATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="32" y="360" width="187" height="30" uuid="49c548dc-e1d2-4e63-8857-2e3fce959fd1"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Slot :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="254" y="362" width="222" height="30" uuid="2c198a47-c1a8-4f9a-a4ae-e8642798603a"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SLOT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="164" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="16" width="450" height="30" uuid="b1192a3f-da56-4933-aa5a-a3323fc7a22c"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Together , India Will Defeat COVID-19 ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="250" y="60" width="50" height="50" uuid="302a79b1-7fdf-4a72-b567-697bfb593387"/>
+				<imageExpression><![CDATA["C:/Users/croma/OneDrive/Pictures/icons8-india-national-emblem-48.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="84" y="120" width="446" height="30" uuid="4bcc0172-af5b-4341-bdcb-a6eb6726a0cf"/>
+				<textElement>
+					<font size="23"/>
+				</textElement>
+				<text><![CDATA[Ministry Of Health And Family Welfare]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="10" width="280" height="30" uuid="8af9928d-598d-47c5-a1ce-5b2eb96d3be8"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Governent of India]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
